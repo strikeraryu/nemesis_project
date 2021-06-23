@@ -1,0 +1,8 @@
+{% load crispy_forms_tags %} {{errors}}
+<form method="post">
+    {% csrf_token %}
+    <input type='text' name='username' placeholder="username">
+    <input type='password' name='password' placeholder="password">
+    <input type="submit" value="Submit">
+</form>
+<button onclick="document.location='/signUp'">signUp</button>

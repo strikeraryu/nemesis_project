@@ -1,0 +1,20 @@
+<form action="/update/username" method="POST">
+    {% csrf_token %}
+    <input type="text" name="value" value="{{username}}">
+    <input type="hidden" name='token' value="{{token}}">
+    <input type="submit" value="edit">
+</form>
+<form action="/update/email" method="POST">
+    {% csrf_token %}
+    <input type="text" name="value" value={{email}}>
+    <input type="hidden" name="token" value="{{token}}">
+    <input type="submit" value="edit">
+</form>
+<form action="/update/address" method="POST">
+    {% csrf_token %}
+    <input type="text" name="value" value="{{address}}">
+    <input type="hidden" name="token" value="{{token}}">
+    <input type="submit" value="edit">
+</form>
+
+<button onclick="document.location='/logout'">Logout</button>
